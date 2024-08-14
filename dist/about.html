@@ -9,7 +9,7 @@
     <script src="https://kit.fontawesome.com/767e3a3afd.js" crossorigin="anonymous"></script>
     <title>About Me</title>
 </head>
-<body>
+<body id="bg-img">
     <header>
         <div class="menu-btn">
             <div class="btn-line"></div>
@@ -48,40 +48,48 @@
 
     <main id="about">
         <h1 class="lg-heading">
-            About <span class="text-secondary">Me</span>
+          About <span class="text-secondary">Me</span>
         </h1>
-        <h2 class="sm-heading">
-            
-        </h2>
+        <h2 class="sm-heading"></h2>
         <div class="about-info">
-
-            <div class="bio">
-                <h3 class="text-secondary">BIO</h3>
-                <p>I am a first-year Software Engineering student at the University of Turku (M.Sc.). Through my studies, my
-                    passion for coding has awakened. I enjoy especially web programming and frontend development projects.
-                    My interest in web development is also reflected in my Bachelor's thesis, in which I wrote about the
-                    accessibility of websites. In the future, my goal is to become a professional in the software industry and
-                    develop my coding skills.
-                    </p>
+          <div class="bio">
+            <p>I am a first-year Software Engineering student at the University of Turku (M.Sc.). Through my studies, my
+              passion for coding has awakened. I enjoy especially web programming and frontend development projects.
+              My interest in web development is also reflected in my Bachelor's thesis, in which I wrote about the
+              accessibility of websites. In the future, my goal is to become a professional in the software industry and
+              develop my coding skills.
+            </p>
+          </div>
+      
+          <div class="accordion thesis">
+            <div class="accordion-header">
+              <h3>Bachelor's Thesis</h3>
+              <span class="icon">&#9660;</span>
             </div>
-
-            <div class="job job-1">
-                <h3>123 Webshop</h3>
-                <h6>Fullstack Developer</h6>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ullam facere eos nobis, natus aliquam dolorem eaque libero voluptates illum ad.</p>
+            <div class="accordion-content">
+              <p>Thesis identifies web accessibility issues encountered by visually impaired users through a literature review.
+                It also explores how issues are managed and whether following the Web Content Accessibility Guidelines (WCAG)
+                is sufficient to address them. Thesis shows that although WCAG guidelines address some problems, additional
+                consideration of cognitive aspects and visual layout is necessary to ensure an accessible user experience for visually
+                impaired users.
+              </p>
             </div>
-            <div class="job job-2">
-                <h3>Designers ABC</h3>
-                <h6>Front End Developer</h6>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ullam facere eos nobis, natus aliquam dolorem eaque libero voluptates illum ad.</p>
+          </div>
+      
+          <div class="accordion job job-1">
+            <div class="accordion-header">
+              <h3>Software Engineer Trainee</h3>
+              <span class="icon">&#9660;</span>
             </div>
-            <div class="job job-3">
-                <h3>Webworks</h3>
-                <h6>Graphic Designer</h6>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ullam facere eos nobis, natus aliquam dolorem eaque libero voluptates illum ad.</p>
+            <div class="accordion-content">
+              <p>During this summer trainee period, I worked in SaaS team. We finished an old project which was skill management software.
+                In addition, we started new SaaS round with creating ideas and planning. Finally two ideas were chosen and started to
+                develop simultaneously. My responsibilities included for example fullstack development and database management.
+              </p>
             </div>
+          </div>
         </div>
-    </main>
+      </main>
 
     <footer id="main-footer">
         Copyright &copy; 2024

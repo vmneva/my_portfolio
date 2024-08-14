@@ -31,3 +31,28 @@ function toggleMenu() {
         showMenu = false;
     }
 }
+
+document.addEventListener('DOMContentLoaded', () => {
+    const accordions = document.querySelectorAll('.accordion-header');
+  
+    accordions.forEach(accordion => {
+      accordion.addEventListener('click', () => {
+        // Close all accordions
+        accordions.forEach(item => {
+          if (item !== accordion) {
+            item.classList.remove('active');
+            item.nextElementSibling.style.maxHeight = 0;
+          }
+        });
+  
+        // Toggle the clicked accordion
+        accordion.classList.toggle('active');
+        const content = accordion.nextElementSibling;
+        if (accordion.classList.contains('active')) {
+          content.style.maxHeight = content.scrollHeight + 'px';
+        } else {
+          content.style.maxHeight = 0;
+        }
+      });
+    });
+  });

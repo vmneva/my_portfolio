@@ -109,29 +109,80 @@ main {
       border-radius: 50%;
       border: #ff74d4 solid 3px; }
 
-.about-info {
-  display: grid;
-  grid-gap: 30px;
-  grid-template-areas: 'bio bio bio' 'job1 job2 job3';
-  grid-template-columns: repeat(3, 1fr); }
-  .about-info .bio-image {
-    grid-area: bioimage;
-    margin: auto;
-    border-radius: 50%;
-    border: #ff74d4 solid 3px; }
-  .about-info .bio {
-    grid-area: bio;
-    font-size: 1.5rem; }
-  .about-info .job-1 {
-    grid-area: job1; }
-  .about-info .job-2 {
-    grid-area: job2; }
-  .about-info .job-3 {
-    grid-area: job3; }
-  .about-info .job {
-    background: #233f75;
-    padding: 0.5rem;
-    border-bottom: #ff74d4 5px solid; }
+#about {
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center; }
+  #about .lg-heading {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+    text-align: center;
+    text-transform: uppercase; }
+    #about .lg-heading .text-secondary {
+      color: #ff74d4; }
+  #about .sm-heading {
+    font-size: 2rem;
+    margin-bottom: 2rem;
+    text-align: center; }
+  #about .about-info {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2rem;
+    width: 100%;
+    max-width: 1200px; }
+    #about .about-info .bio {
+      grid-column: 1 / -1;
+      background: transparent;
+      padding: 1.5rem;
+      border-radius: 10px;
+      color: white; }
+      #about .about-info .bio h3 {
+        margin-bottom: 1rem;
+        color: #ff74d4; }
+      #about .about-info .bio p {
+        line-height: 1.6; }
+    #about .about-info .accordion {
+      background: #1d3461;
+      border-radius: 10px;
+      overflow: hidden;
+      display: flex;
+      flex-direction: column; }
+      #about .about-info .accordion-header {
+        padding: 1.5rem;
+        cursor: pointer;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        background: #1d3461;
+        color: #fff; }
+        #about .about-info .accordion-header h3 {
+          margin: 0;
+          text-transform: uppercase; }
+        #about .about-info .accordion-header .icon {
+          font-size: 1.5rem;
+          transition: transform 0.3s ease; }
+        #about .about-info .accordion-header.active .icon {
+          transform: rotate(180deg); }
+      #about .about-info .accordion-content {
+        max-height: 0;
+        overflow: hidden;
+        transition: max-height 0.3s ease;
+        padding: 0 1.5rem;
+        display: flex;
+        flex-direction: column; }
+        #about .about-info .accordion-content p {
+          line-height: 1.6;
+          color: #ffa7e4; }
+      #about .about-info .accordion.active .accordion-content {
+        max-height: 500px;
+        padding: 1.5rem; }
+    #about .about-info .thesis {
+      grid-column: 1 / -1; }
+
+@media (max-width: 768px) {
+  #about .about-info {
+    grid-template-columns: 1fr; } }
 
 .projects {
   display: grid;
