@@ -1,0 +1,53 @@
+/* contact me */
+#contact {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  
+    body {
+      font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+      color: #333;
+      margin: 0;
+      padding: 0;
+      background-color: #f4f4f4;
+    }
+  
+    .lg-heading {
+      font-size: 3rem;
+      margin-bottom: 1rem;
+    }
+  
+    .sm-heading {
+      font-size: 1.5rem;
+      margin-bottom: 2rem;
+      color: set-text-color($primary-color);
+    }
+  
+    .text-secondary {
+      color: $secondary-color;
+    }
+  
+    .boxes {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+  
+      div {
+        margin: 1rem 0;
+        font-size: 1.2rem;
+      }
+    }
+    .icons {
+      display: flex;
+      justify-content: center;
+      gap: 1rem;
+      a {
+        color: set-text-color($primary-color);
+        transition: color 0.3s ease;
+  
+        &:hover {
+          color: $secondary-color;
+        }
+      }
+    }
+  }

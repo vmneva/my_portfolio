@@ -57,6 +57,11 @@ header {
     font-weight: bold;
     transition: color 0.3s ease, transform 0.3s ease;
     font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+
+    &.current {
+      color: $secondary-color;
+
+  }
   
     &:hover {
       color: $secondary-color
