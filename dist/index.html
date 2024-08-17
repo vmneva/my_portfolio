@@ -10,34 +10,31 @@
     <title>Portfolio - Viivi Nevalainen</title>
 </head>
 <body id="bg-img">
-    <header>
-        <nav class="menu">
-          <div class="menu-branding"></div>
-          <ul class="menu-nav">
-            <li class="nav-item current">
-              <a href="index.html" class="nav-link">Home</a>
-            </li>
-            <li class="nav-item">
-              <a href="about.html" class="nav-link">About me</a>
-            </li>
-            <li class="nav-item">
-              <a href="work.html" class="nav-link">My Work</a>
-            </li>
-            <li class="nav-item">
-              <a href="contact.html" class="nav-link">Contact Me</a>
-            </li>
-          </ul>
-        </nav>
-      </header>
+  <header>
+    <div class="navbar" id="navigation">
+      <ul class="links">
+        <li><a href="index.html" class="nav-link">Home</a></li>
+        <li><a href="about.html" class="nav-link">About me</a></li>
+        <li><a href="contact.html" class="nav-link">Contact Me</a></li>
+      </ul>
+      <div class="toggle_btn">
+        <i class="fa-solid fa-bars"></i>
+      </div>
+
+      <div class="dropdown_menu">
+        <li><a href="index.html" class="nav-link">Home</a></li>
+        <li><a href="about.html" class="nav-link">About me</a></li>
+        <li><a href="contact.html" class="nav-link">Contact Me</a></li>
+      </div>
+    </div>
+  </header>
 
     <main id="home">
         <img src="img/profilepic.jpeg" alt="Viivi Nevalainen" class="bio-image">
         <h1 class="lg-heading">
             Viivi <span class="text-secondary">Nevalainen</span>
         </h1>
-        <h2 class="sm-heading">
-            Software Engineer Student | Junior Software Engineer
-        </h2>
+        <h2 class="sm-heading">Software Engineer Student & Junior Software Engineer</h2>
         <div class="icons">
             <a href="https://www.linkedin.com/in/viivi-nevalainen-608046204/">
                 <i class="fa-brands fa-linkedin fa-2x"></i>
@@ -47,6 +44,10 @@
             </a>
         </div>
     </main>
+
+    <footer id="main-footer">
+      Copyright &copy; 2024
+    </footer>
 
     <script src="js/main.js"></script>
 </body>

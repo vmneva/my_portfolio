@@ -1,42 +1,58 @@
 header {
-  display: flex;
-  justify-content: flex-end;
-  align-items: center;
-  padding: 1rem;
-  background-color: transparent;
-  color: #fff; }
-  header .menu {
-    display: flex;
-    align-items: center; }
-    header .menu-branding {
-      display: none; }
-    header .menu-nav {
-      list-style: none;
-      display: flex;
-      margin: 0;
-      padding: 0; }
-      header .menu-nav .nav-item {
-        margin: 0 1rem; }
-        header .menu-nav .nav-item.current .nav-link {
-          color: #ff74d4; }
-        header .menu-nav .nav-item .nav-link {
-          text-decoration: none;
-          color: #fff;
-          font-weight: bold;
-          transition: color 0.3s ease, transform 0.3s ease;
-          font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif; }
-          header .menu-nav .nav-item .nav-link:hover {
-            color: #ff74d4;
-            transform: scale(1.1); }
+  position: relative;
+  padding: 0 2rem;
+  background-color: transparent; }
 
-@media (max-width: 768px) {
-  header {
-    justify-content: space-between; }
-    header .menu-nav {
-      flex-direction: column;
-      align-items: flex-end; }
-      header .menu-nav .nav-item {
-        margin: 0.5rem 0; } }
+.navbar {
+  width: 100%;
+  height: 60px;
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: end; }
+  .navbar .links {
+    display: flex;
+    gap: 2rem; }
+  .navbar .toggle_btn {
+    color: #fff;
+    font-size: 1.8rem;
+    cursor: pointer;
+    display: none; }
+  .navbar li {
+    list-style: none; }
+  .navbar a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 1rem;
+    font-weight: bold;
+    transition: color 0.3s ease, transform 0.3s ease;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif; }
+    .navbar a:hover {
+      color: #ff74d4; }
+
+.dropdown_menu {
+  display: none;
+  position: absolute;
+  right: 2rem;
+  top: 60px;
+  height: 0;
+  width: 150px;
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(10px);
+  border-radius: 10px;
+  overflow: hidden;
+  transition: height 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  z-index: -1; }
+  .dropdown_menu.open {
+    height: 150px; }
+  .dropdown_menu li {
+    padding: 0.7rem;
+    display: flex;
+    align-items: center;
+    justify-content: center; }
+  .dropdown_menu a {
+    font-weight: 100; }
 
 * {
   box-sizing: border-box; }
@@ -66,16 +82,12 @@ h1, h2, h3 {
   margin: 0;
   font-weight: 400; }
   h1.lg-heading, h2.lg-heading, h3.lg-heading {
-    font-size: 6rem; }
+    font-size: 5rem; }
   h1.sm-heading, h2.sm-heading, h3.sm-heading {
     margin-bottom: 2rem;
     padding: 0.2rem 1rem;
-    font-size: 25px;
+    font-size: 20px;
     font-family: 'Courier New', Courier, monospace; }
-
-a {
-  color: #fff;
-  text-decoration: none; }
 
 header {
   position: fixed;
@@ -86,14 +98,16 @@ header {
   color: #ff74d4; }
 
 main {
-  padding: 4rem;
   min-height: calc(100vh - 60px); }
   main .icons {
     margin-top: 1rem;
-    align-items: center; }
+    align-items: center;
+    padding-bottom: 1rem; }
     main .icons a {
       padding: 0.6rem;
-      font-size: 30px; }
+      font-size: 30px;
+      text-decoration: none;
+      color: #fff; }
       main .icons a:hover {
         color: #ff74d4;
         transition: all 0.5s ease-out; }
@@ -127,12 +141,17 @@ main {
     text-align: center; }
   #about .about-info {
     display: grid;
+    grid-template-areas: 'bio bio' 'thesis job';
     grid-template-columns: 1fr 1fr;
     gap: 2rem;
     width: 100%;
     max-width: 1200px; }
+    #about .about-info .job {
+      grid-area: job; }
+    #about .about-info .thesis {
+      grid-area: thesis; }
     #about .about-info .bio {
-      grid-column: 1 / -1;
+      grid-area: bio;
       background: transparent;
       padding: 1.5rem;
       border-radius: 10px;
@@ -143,7 +162,7 @@ main {
       #about .about-info .bio p {
         line-height: 1.6; }
     #about .about-info .accordion {
-      background: #1d3461;
+      background: transparent;
       border-radius: 10px;
       overflow: hidden;
       display: flex;
@@ -155,7 +174,7 @@ main {
         justify-content: space-between;
         align-items: center;
         background: #1d3461;
-        color: #fff; }
+        color: #ffa7e4; }
         #about .about-info .accordion-header h3 {
           margin: 0;
           text-transform: uppercase; }
@@ -173,27 +192,10 @@ main {
         flex-direction: column; }
         #about .about-info .accordion-content p {
           line-height: 1.6;
-          color: #ffa7e4; }
+          color: white; }
       #about .about-info .accordion.active .accordion-content {
         max-height: 500px;
         padding: 1.5rem; }
-    #about .about-info .thesis {
-      grid-column: 1 / -1; }
-
-@media (max-width: 768px) {
-  #about .about-info {
-    grid-template-columns: 1fr; } }
-
-.projects {
-  display: grid;
-  grid-gap: 0.7rem; }
-  .projects img {
-    width: 100%;
-    border: 3px #fff solid; }
-    .projects img:hover {
-      opacity: 0.5;
-      border-color: #ff74d4;
-      transition: all 0.5s ease-out; }
 
 .boxes {
   display: flex;
@@ -237,3 +239,75 @@ main {
   background: #111f3a;
   color: #fff;
   height: 60px; }
+
+@media screen and (min-width: 1171px) {
+  .projects {
+    grid-template-columns: repeat(4, 1fr); } }
+
+@media screen and (min-width: 993px) and (max-width: 1170px) {
+  .projects {
+    grid-template-columns: repeat(3, 1fr); } }
+
+@media screen and (max-width: 992px) {
+  main {
+    align-items: center;
+    text-align: center; }
+    main .lg-heading {
+      line-height: 1;
+      margin-bottom: 1rem; }
+  header .navbar .links {
+    display: none; }
+  header .navbar .toggle_btn {
+    display: block; }
+  header .dropdown_menu {
+    display: block; }
+  .about-info {
+    grid-template-areas: 'bio' 'thesis' 'job';
+    grid-template-columns: 1fr; } }
+
+@media screen and (max-width: 576px) {
+  main {
+    min-height: calc(100vh - 40px); }
+    main#home .bio-image {
+      width: 200px;
+      height: 200px;
+      border-radius: 50%;
+      border: #ff74d4 solid 3px; }
+    main#home h1 {
+      margin-top: 1rem;
+      font-size: 2rem; }
+    main#home h2 {
+      margin-top: 1rem;
+      font-size: 14px; }
+    main#home .icons {
+      margin-top: 3rem; }
+      main#home .icons a {
+        font-size: 1.5rem; }
+  header .navbar .links {
+    display: none; }
+  header .navbar .toggle_btn {
+    display: block; }
+  header .dropdown_menu {
+    right: 2rem;
+    width: fit-content;
+    top: 3rem; }
+  #about .lg-heading {
+    margin-bottom: 0.5rem; }
+  #about .accordion p {
+    font-size: 12px;
+    text-align: justify; }
+  #about .accordion-header {
+    font-size: 12px; }
+  #about .about-info {
+    grid-template-areas: 'bio' 'thesis' 'job';
+    grid-template-columns: 1fr;
+    width: 100%; }
+    #about .about-info p {
+      font-size: 12px;
+      text-align: justify; }
+  .projects {
+    grid-template-columns: 1fr; }
+  #main-footer {
+    font-size: 12px;
+    height: 40px;
+    padding: 0.7rem; } }
