@@ -15,6 +15,7 @@ $background-opacity: 0.8;
 @mixin background {
     @if $show-home-image {
         &#bg-img {
+            position: relative;
             background: $home-image;
             background-attachment: fixed;
             background-size: cover;
@@ -30,7 +31,7 @@ $background-opacity: 0.8;
                 background: rgba($primary-color, $background-opacity);
             }
         }
-    } 
+    }
 }
 /* responsiveness for different screens */
 @mixin mediaS {
@@ -44,12 +45,12 @@ $background-opacity: 0.8;
     }
 }
 @mixin mediaL {
-    @media screen and (min-width: 769px) and (max-width: 1440px) {
+    @media screen and (min-width: 769px) and (max-width: 1700px) {
         @content; 
     }
 }
 @mixin mediaXL {
-    @media screen and (min-width: 1441px) {
+    @media screen and (min-width: 1701px) {
         @content; 
     }
 }
