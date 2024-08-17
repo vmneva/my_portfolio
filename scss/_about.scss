@@ -1,0 +1,107 @@
+/* about me */
+#about {
+    padding: 2rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  
+    .lg-heading {
+      font-size: 3rem;
+      margin-bottom: 1rem;
+      text-align: center;
+      text-transform: uppercase;
+  
+      .text-secondary {
+        color: $secondary-color;
+      }
+    }
+    .sm-heading {
+      font-size: 2rem;
+      margin-bottom: 2rem;
+      text-align: center;
+    }
+  
+    .about-info {
+        display: grid;
+        grid-template-areas:
+        'bio bio'
+        'thesis job';
+        grid-template-columns: 1fr 1fr;
+        gap: 2rem;
+        width: 100%;
+        max-width: 1200px;
+  
+      .bio {
+        grid-area: bio;
+        background: transparent;
+        padding: 1.5rem;
+        border-radius: 10px;
+        color: white;
+  
+        h3 {
+          margin-bottom: 1rem;
+          color: $secondary-color;
+        }
+  
+        p {
+          line-height: 1.6;
+        }
+      }
+      .job {
+        grid-area: job;
+      }
+      .thesis {
+        grid-area: thesis;
+      }
+  
+        .accordion {
+            background: transparent;
+            border-radius: 10px;
+            overflow: hidden;
+            display: flex;
+            flex-direction: column;
+  
+            &-header {
+                padding: 1.5rem;
+                cursor: pointer;
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                background: $primary-color;
+                color: lighten($color: $secondary-color, $amount: 10);
+    
+            h3 {
+                margin: 0;
+                text-transform: uppercase;
+            }
+    
+            .icon {
+                font-size: 1.5rem;
+                transition: transform 0.3s ease;
+            }
+    
+            &.active .icon {
+                transform: rotate(180deg);
+                }
+            }
+            &-content {
+                max-height: 0;
+                overflow: hidden;
+                transition: max-height 0.3s ease;
+                padding: 0 1.5rem;
+                display: flex;
+                flex-direction: column;
+        
+                p {
+                    line-height: 1.6;
+                    color: white;
+                }
+            }
+    
+            &.active .accordion-content {
+                max-height: 500px;
+                padding: 1.5rem;
+            }
+        }
+    }
+}
