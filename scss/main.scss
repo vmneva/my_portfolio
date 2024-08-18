@@ -17,31 +17,12 @@ body {
     line-height: 1.5;
 }
 
-h1, h2, h3 {
-    margin: 0;
-    font-weight: 400;
-
-    &.lg-heading {
-        font-size: 5rem;
-        margin-top: 3rem;
-    }
-    &.sm-heading {
-        margin-bottom: 2rem;
-        padding: 0.2rem 1rem;
-        font-size: 20px;
-        font-family: $secondary-font;
-    }
-}
-
 header {
   position: fixed;
   z-index: 2;
   width: 100%;
 }
 
-.text-secondary {
-  color: $secondary-color;
-}
 main {
     min-height: calc(100vh - 60px);
 
@@ -59,6 +40,26 @@ main {
         margin-top: 3rem;
       }
     }
+}
+
+h1, h2, h3 {
+  margin: 0;
+  font-weight: 400;
+
+  &.lg-heading {
+      font-size: 5rem;
+      margin-top: 3rem;
+  }
+  &.sm-heading {
+      margin-bottom: 2rem;
+      padding: 0.2rem 1rem;
+      font-size: 20px;
+      font-family: $secondary-font;
+  }
+}
+
+.text-secondary {
+  color: $secondary-color;
 }
 
 /* footer */
