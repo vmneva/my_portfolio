@@ -149,36 +149,40 @@ header {
 
 /* contact me */
 #contact {
+  text-align: center;
   display: flex;
   flex-direction: column;
   align-items: center; }
-  #contact body {
-    font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
-    margin: 0;
-    padding: 0; }
   #contact .lg-heading {
     font-size: 3rem;
-    margin-bottom: 1rem; }
-  #contact .sm-heading {
-    font-size: 1.5rem;
-    margin-bottom: 2rem;
-    color: #fff; }
-  #contact .text-secondary {
-    color: #ff74d4; }
-  #contact .boxes {
+    margin-bottom: 1rem;
+    padding-top: 1rem;
+    text-transform: uppercase; }
+  #contact .circle-container {
+    width: 300px;
+    height: 300px;
+    border-radius: 50%;
+    border: #ff74d4 solid 3px;
+    background-color: rgba(29, 52, 97, 0.8);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     display: flex;
-    flex-direction: column;
-    align-items: center; }
+    justify-content: center;
+    align-items: center;
+    margin-top: 3rem; }
+  #contact .boxes {
+    text-align: center; }
     #contact .boxes div {
-      margin: 1rem 0;
-      font-size: 1.2rem; }
+      font-size: 1.3rem;
+      text-align: center; }
   #contact .icons {
     display: flex;
     justify-content: center;
     gap: 1rem; }
     #contact .icons a {
       color: #fff;
-      transition: color 0.3s ease; }
+      transition: color 0.3s ease;
+      padding-top: 1.5rem;
+      margin-inline: 0.5rem; }
       #contact .icons a:hover {
         color: #ff74d4; }
 
@@ -196,9 +200,9 @@ body {
     background: #1d3461; }
   body#bg-img {
     position: relative;
-    background: url(../img/background.jpg);
     background-attachment: fixed;
-    background-size: cover; }
+    background-size: cover;
+    background-image: url(../img/background.jpg); }
     body#bg-img:after {
       content: '';
       position: absolute;
@@ -261,7 +265,7 @@ footer {
       border-radius: 50%;
       border: #ff74d4 solid 3px; }
     main#home h1, main#home h2 {
-      margin-top: 1rem;
+      margin-top: 2rem;
       font-size: 2rem; }
     main#home h2 {
       font-size: 12px; }
@@ -287,6 +291,14 @@ footer {
     grid-template-columns: 1fr;
     width: 100%;
     gap: 1rem; }
+  #contact .lg-heading {
+    font-size: 2.5rem; }
+  #contact .circle-container {
+    width: 250px;
+    height: 250px;
+    margin-top: 3.5rem; }
+    #contact .circle-container div {
+      font-size: 1.2rem; }
   footer {
     font-size: 12px;
     height: 40px;

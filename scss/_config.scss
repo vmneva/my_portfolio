@@ -21,9 +21,9 @@ $background-opacity: 0.8;
         }
         &#bg-img {
             position: relative;
-            background: $home-image;
             background-attachment: fixed;
             background-size: cover;
+            background-image: $home-image;
         
             &:after {
                 content: '';
