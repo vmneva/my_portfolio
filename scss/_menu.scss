@@ -27,7 +27,7 @@ header {
 
       &:hover {
         color: $secondary-color;
-        transition: all 0.5s ease-out
+        transition: all 0.5s ease-out;
       }
     }
   }
@@ -47,7 +47,7 @@ header {
   li {
     list-style: none;
   }
-  
+
   a {
     color: #fff;
     text-decoration: none;
@@ -59,9 +59,9 @@ header {
     &.current {
       color: $secondary-color;
     }
-  
+
     &:hover {
-      color: $secondary-color
+      color: $secondary-color;
     }
   }
 }
@@ -73,12 +73,13 @@ header {
   top: 60px;
   height: 0;
   width: 150px;
-  background: rgba(255, 255, 255, 0.1);
+  background: $primary-color;
   backdrop-filter: blur(10px);
   border-radius: 10px;
   overflow: hidden;
   transition: height 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
   z-index: -1;
+  font-weight: 400;
 
   &.open {
     height: 150px;

@@ -24,8 +24,8 @@
   .about-info {
     display: grid;
     grid-template-areas:
-    'bio bio'
-    'thesis job';
+      "bio bio"
+      "thesis job";
     grid-template-columns: 1fr 1fr;
     gap: 10px;
     width: 100%;
@@ -65,13 +65,13 @@
         background: $primary-color;
 
         h3 {
-            margin: 0;
-            text-transform: uppercase;
-            font-weight: bold;
+          margin: 0;
+          text-transform: uppercase;
+          font-weight: bold;
         }
         .icon {
-            font-size: 1.5rem;
-            transition: transform 0.3s ease;
+          font-size: 1.5rem;
+          transition: transform 0.3s ease;
         }
         &.active .icon {
           transform: rotate(180deg);

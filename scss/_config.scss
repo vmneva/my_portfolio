@@ -1,61 +1,61 @@
 $primary-color: #1d3461;
 $secondary-color: #ff74d4;
-$primary-font: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-$secondary-font: 'Courier New', Courier, monospace;
+$primary-font: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+$secondary-font: "Courier New", Courier, monospace;
 $show-home-image: true;
 $home-image: url(../img/background.jpg);
 $background-opacity: 0.8;
 
 @function set-text-color($color) {
-    @if (lightness($color) > 40) {
-        @return #000;
-    } @else {
-        @return #fff
-    }
-};
+  @if (lightness($color) > 40) {
+    @return #000;
+  } @else {
+    @return #fff;
+  }
+}
 
 @mixin background {
-    @if $show-home-image {
-        &#no-img {
-            background: $primary-color;
-        }
-        &#bg-img {
-            position: relative;
-            background-attachment: fixed;
-            background-size: cover;
-            background-image: $home-image;
-        
-            &:after {
-                content: '';
-                position: absolute;
-                top: 0;
-                right: 0;
-                width: 100%;
-                height: 100%;
-                z-index: -1;
-                background: rgba($primary-color, $background-opacity);
-            }
-        }
+  @if $show-home-image {
+    &#no-img {
+      background: $primary-color;
     }
+    &#bg-img {
+      position: relative;
+      background-attachment: fixed;
+      background-size: cover;
+      background-image: $home-image;
+
+      &:after {
+        content: "";
+        position: absolute;
+        top: 0;
+        right: 0;
+        width: 100%;
+        height: 100%;
+        z-index: -1;
+        background: rgba($primary-color, $background-opacity);
+      }
+    }
+  }
 }
 /* responsiveness for different screens */
 @mixin mediaS {
-    @media screen and (max-width: 426px) {
-        @content;     
-    }
+  @media screen and (max-width: 426px) {
+    @content;
+  }
 }
 @mixin mediaM {
-    @media screen and (max-width: 768px) {
-        @content;       
-    }
+  @media screen and (max-width: 768px) {
+    @content;
+  }
 }
 @mixin mediaL {
-    @media screen and (min-width: 769px) and (max-width: 1700px) {
-        @content; 
-    }
+  @media screen and (min-width: 769px) and (max-width: 1700px) {
+    @content;
+  }
 }
 @mixin mediaXL {
-    @media screen and (min-width: 1701px) {
-        @content; 
-    }
+  @media screen and (min-width: 1701px) {
+    @content;
+  }
 }
