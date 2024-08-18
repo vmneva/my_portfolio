@@ -1,7 +1,10 @@
 # Portfolio Website - Viivi Nevalainen
 
-My personal portfolio webpage developed with SCSS, HTML, JavaScript and GitHub Pages.
-Website can be found from https://vmneva.github.io/my_portfolio/index.html
+My personal portfolio webpage developed with SCSS, HTML and JavaScript.
+Website is published with GitHub Pages and can be found [here](https://vmneva.github.io/my_portfolio/index.html).
+
+This portfolio is a part of LUT course _Software Development Skills: Front-End 2023-24_. In addition
+to my own project, the coursework including the demo website can be found from [here](https://github.com/vmneva/modern_portfolio).
 
 Running the project locally:
 
