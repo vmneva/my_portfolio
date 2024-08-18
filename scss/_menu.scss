@@ -79,7 +79,6 @@ header {
   overflow: hidden;
   transition: height 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
   z-index: -1;
-  font-weight: 400;
 
   &.open {
     height: 150px;
@@ -93,6 +92,7 @@ header {
   }
 
   a {
-    font-weight: 100;
+    font-weight: 300;
+    font-family: $primary-font;
   }
 }

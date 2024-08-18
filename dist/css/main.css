@@ -60,8 +60,7 @@ header {
   border-radius: 10px;
   overflow: hidden;
   transition: height 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
-  z-index: -1;
-  font-weight: 400; }
+  z-index: -1; }
   .dropdown_menu.open {
     height: 150px; }
   .dropdown_menu li {
@@ -70,7 +69,8 @@ header {
     align-items: center;
     justify-content: center; }
   .dropdown_menu a {
-    font-weight: 100; }
+    font-weight: 300;
+    font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif; }
 
 /* about me */
 #about {
