@@ -24,9 +24,11 @@
   .about-info {
     display: grid;
     grid-template-areas:
-      "bio bio"
-      "thesis job";
-    grid-template-columns: 1fr 1fr;
+      "bio bio bio"
+      "job1 job2 job3"
+      "thesis2 thesis2 thesis2"
+      "thesis1 thesis1 thesis1";
+    grid-template-columns: 1fr 1fr 1fr;
     gap: 10px;
     width: 100%;
     max-width: 1200px;
@@ -39,11 +41,29 @@
       border-radius: 10px;
       color: set-text-color($primary-color);
     }
-    .job {
-      grid-area: job;
+    .job1 {
+      grid-area: job1;
     }
-    .thesis {
-      grid-area: thesis;
+    .job2 {
+      grid-area: job2;
+    }
+    .job3 {
+      grid-area: job3;
+    }
+    .thesis1 {
+      grid-area: thesis1;
+    }
+    .thesis2 {
+      grid-area: thesis2;
+
+      a {
+        color: $secondary-color;
+        text-decoration: none;
+
+        &:hover {
+          text-decoration: underline;
+        }
+      }
     }
 
     .accordion {
