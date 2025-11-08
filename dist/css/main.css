@@ -91,8 +91,8 @@ header {
     text-align: center; }
   #about .about-info {
     display: grid;
-    grid-template-areas: "bio bio" "thesis job";
-    grid-template-columns: 1fr 1fr;
+    grid-template-areas: "bio bio bio" "job1 job2 job3" "thesis2 thesis2 thesis2" "thesis1 thesis1 thesis1";
+    grid-template-columns: 1fr 1fr 1fr;
     gap: 10px;
     width: 100%;
     max-width: 1200px;
@@ -103,10 +103,21 @@ header {
       padding: 1.5rem;
       border-radius: 10px;
       color: #fff; }
-    #about .about-info .job {
-      grid-area: job; }
-    #about .about-info .thesis {
-      grid-area: thesis; }
+    #about .about-info .job1 {
+      grid-area: job1; }
+    #about .about-info .job2 {
+      grid-area: job2; }
+    #about .about-info .job3 {
+      grid-area: job3; }
+    #about .about-info .thesis1 {
+      grid-area: thesis1; }
+    #about .about-info .thesis2 {
+      grid-area: thesis2; }
+      #about .about-info .thesis2 a {
+        color: #ff74d4;
+        text-decoration: none; }
+        #about .about-info .thesis2 a:hover {
+          text-decoration: underline; }
     #about .about-info .accordion {
       background: transparent;
       border-radius: 10px;

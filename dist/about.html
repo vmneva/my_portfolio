@@ -13,18 +13,25 @@
   <body id="bg-img">
     <header>
       <div class="navbar" id="navigation">
+        <div class="icons">
+          <a href="https://www.linkedin.com/in/viivi-nevalainen-608046204/"
+            ><i class="fa-brands fa-linkedin fa-2x"></i
+          ></a>
+          <a href="https://github.com/vmneva/myprojects"
+            ><i class="fa-brands fa-github fa-2x"></i
+          ></a>
+        </div>
         <ul class="links">
           <li><a href="index.html" class="nav-link">Home</a></li>
           <li><a href="about.html" class="nav-link current">About me</a></li>
-          <li><a href="contact.html" class="nav-link">Contact Me</a></li>
         </ul>
         <div class="toggle_btn">
           <i class="fa-solid fa-bars"></i>
         </div>
+
         <div class="dropdown_menu">
-          <li><a href="index.html" class="nav-link">Home</a></li>
-          <li><a href="about.html" class="nav-link current">About me</a></li>
-          <li><a href="contact.html" class="nav-link">Contact Me</a></li>
+          <li><a href="index.html" class="nav-link current">Home</a></li>
+          <li><a href="about.html" class="nav-link">About me</a></li>
         </div>
       </div>
     </header>
@@ -34,17 +41,70 @@
       <div class="about-info">
         <div class="bio">
           <p>
-            I am a fourth-year Software Engineering student at the University of
-            Turku (M.Sc.). Alongside my studies, I work as Software Engineer
-            Trainee in ATR Soft. I enjoy especially web programming and frontend
-            development projects. My interest in web development is also
-            reflected in my Bachelor's thesis, in which I wrote about the
-            accessibility of websites. In the future, my goal is to become a
-            professional in the software industry and develop my coding skills.
+            I am a passionate full-stack developer with a Master of Science in
+            Software Engineering and hands-on experience in software
+            development. I especially enjoy working with front-end technologies,
+            UIs, and databases, but I am also motivated by understanding the
+            bigger picture and developing systems end to end. My goal is to
+            continuously expand my skills, strengthen my expertise with modern
+            technologies, and eventually take on responsibilities in project
+            leadership.
           </p>
         </div>
 
-        <div class="accordion thesis">
+        <div class="accordion job-1">
+          <div class="accordion-header">
+            <h3>Software Engineer Trainee</h3>
+            <span class="icon">&#9660;</span>
+          </div>
+          <div class="accordion-content">
+            <p>
+              I worked as a developer in a relatively new SaaS team. At the
+              beginning of the summer, we finalized an AI-powered skills
+              management tool for internal use, after which we began
+              brainstorming ideas for the next SaaS iteration. We decided to
+              implement proof-of-concept versions of an AI-assisted accounting
+              tool using Python, and a gamified decision-making application
+              built with TypeScript and Socket.io.
+            </p>
+          </div>
+        </div>
+
+        <div class="accordion job-2">
+          <div class="accordion-header">
+            <h3>Junior Software Engineer</h3>
+            <span class="icon">&#9660;</span>
+          </div>
+          <div class="accordion-content">
+            <p>
+              I continued working in the SaaS team as a full-stack developer and
+              UX/UI designer alongside my studies and later on a full-time
+              basis. We developed a decision-making tool for B2B clients,
+              primarily using TypeScript, React, and Firebase. At the turn of
+              the year, I took on the main responsibility for UX/UI design,
+              which I carried out using Figma.
+            </p>
+          </div>
+        </div>
+
+        <div class="accordion job-3">
+          <div class="accordion-header">
+            <h3>Software Engineer</h3>
+            <span class="icon">&#9660;</span>
+          </div>
+          <div class="accordion-content">
+            <p>
+              I work as a full-stack developer in a client project, where my
+              responsibilities include several applications involving
+              integrations and APIs. The development is carried out in Visual
+              Studio using C#, and databases are managed with MS SQL Server. In
+              addition, I am part of our internal Frontend & Accessibility
+              specialist group.
+            </p>
+          </div>
+        </div>
+
+        <div class="accordion thesis1">
           <div class="accordion-header">
             <h3>Bachelor's Thesis</h3>
             <span class="icon">&#9660;</span>
@@ -63,26 +123,28 @@
           </div>
         </div>
 
-        <div class="accordion job job-1">
+        <div class="accordion thesis2">
           <div class="accordion-header">
-            <h3>Software Engineer Trainee</h3>
+            <h3>Master's Thesis</h3>
             <span class="icon">&#9660;</span>
           </div>
           <div class="accordion-content">
             <p>
-              During this summer trainee period, I worked in SaaS team. We
-              finished an old project which was skill management software. In
-              addition, we started new SaaS round with creating ideas and
-              planning. Finally two ideas were chosen and started to develop
-              simultaneously. My responsibilities included for example fullstack
-              development and database management.
+              Alongside my work, I completed my master’s thesis in collaboration
+              with ATR Soft. The thesis explored the critical nature of the
+              onboarding phase in B2B SaaS products and how user engagement can
+              be improved by applying techniques from game development. The
+              empirical part of the research involved conducting semi-structured
+              interviews and performing a thematic analysis of the results.
+              Thesis is published and available
+              <a href="https://urn.fi/URN:NBN:fi-fe2025060257426">from here</a>.
             </p>
           </div>
         </div>
       </div>
     </main>
 
-    <footer>Copyright &copy; 2024</footer>
+    <footer id="footer"></footer>
 
     <script src="js/main.js"></script>
   </body>
