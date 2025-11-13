@@ -57,8 +57,11 @@
     .about-info {
       grid-template-areas:
         "bio"
-        "thesis"
-        "job";
+        "job1"
+        "job2"
+        "job3"
+        "thesis1"
+        "thesis2";
       grid-template-columns: 1fr;
       width: 100%;
       gap: 1rem;
@@ -119,8 +122,11 @@
     .about-info {
       grid-template-areas:
         "bio"
-        "thesis"
-        "job";
+        "job1"
+        "job2"
+        "job3"
+        "thesis1"
+        "thesis2";
       grid-template-columns: 1fr;
     }
     p {
